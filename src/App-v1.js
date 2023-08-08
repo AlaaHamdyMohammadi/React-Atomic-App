@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { faker } from "@faker-js/faker";
 
 function createRandomPost() {
@@ -44,6 +44,8 @@ function App() {
     },
     [isFakeDark]
   );
+
+ 
 
   return (
     // 2) Passing value to child component
@@ -108,7 +110,7 @@ function Results() {
   return <p>🚀 {posts.length} atomic posts found</p>;
 }
 
-function Main() {
+ function Main() {
   return (
     <main>
       <FormAddPost />
